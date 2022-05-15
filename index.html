@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+
+<head>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>ZIA</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="warning">
+        <h1 style="font-weight:500;">Speech Speech SDK not found
+            (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h1>
+    </div>
+    <div id="content">
+        <textarea id="synthesisText" placeholder="Insira um texto para ser convertido..." spellcheck="false"></textarea>
+        <ul id="buttons">
+            <li><button id="startSynthesisAsyncButton">Sintetizar</button></li>
+            <li><button id="pauseButton">Pausar</button></li>
+            <li><button id="resumeButton">Retomar</button></li>
+            <li><button id="downloadButton">Baixar</button></li>
+        </ul>
+        <textarea id="resultsDiv" readonly></textarea>
+    </div>
+    <div class="ocult">
+        <select id="formatOptions">
+            <option>Waiting for SDK loading.</option>
+        </select>
+    </div>
+    <div id="eventsDiv" readonly></div>
+
+
+
+    <script src="https://aka.ms/csspeech/jsbrowserpackageraw"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
